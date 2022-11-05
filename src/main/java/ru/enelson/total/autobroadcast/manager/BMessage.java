@@ -47,9 +47,11 @@ public class BMessage {
 	}
 	
 	public BMessageLine getCurrentMessage() {
-		int id = this.currentMessage;
+		return this.lines.get(this.currentMessage);
+	}
+	
+	public void nextMessage() {
 		this.currentMessage = (this.lines.size()==this.currentMessage+1) ? 0 : this.currentMessage+1;
-		return this.lines.get(id);
 	}
 	
 	public List<String> getEnabledWorlds() {
