@@ -1,0 +1,44 @@
+groups:
+  default: #totalautobroadcast.group.default
+    interval: 120
+    enabled-worlds:
+      - world
+      - world_nether
+      - world_the_end
+    sound: # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
+      name: ENTITY_EXPERIENCE_ORB_PICKUP
+      volume: 0.8
+      pitch: 1
+    messages:
+      1:
+        type: text
+        text: |-
+          &c
+          &aДля получения гражданства
+          &aпройдите к &8[&bЛицензиатору&8]&a.
+          &c
+        requirements: {}
+
+  level-1: #totalautobroadcast.group.level-1
+    interval: 300
+    enabled-worlds:
+      - world
+      - world_nether
+      - world_the_end
+    sound:
+      name: ENTITY_PLAYER_LEVELUP
+      volume: 0.8
+      pitch: 0.1
+    messages:
+      1:
+        type: text
+        text: |-
+          &f
+          &e             ❂ &6Ежедневная рулетка &e❂
+          &bУ Вас есть &a%totaldailyrewards_available% &bбесплатных неиспользованных вращений! Скорее спешите в &aКазино&b!
+          &f
+        requirements:
+          1:
+            type: '>'
+            input: '%totaldailyrewards_available%'
+            output: 0
