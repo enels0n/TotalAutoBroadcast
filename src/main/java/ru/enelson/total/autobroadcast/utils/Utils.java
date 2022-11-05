@@ -9,9 +9,6 @@ public class Utils {
 		input = PlaceholderAPI.setPlaceholders(player, input);
 		output = PlaceholderAPI.setPlaceholders(player, output);
 
-		//System.out.println("        type: " + type);
-		//System.out.println("        input: " + input);
-		//System.out.println("        output: " + output);
 		switch(type) {
 		case("=="):
 			return input.equals(output);
