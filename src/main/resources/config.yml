@@ -10,14 +10,13 @@ groups:
       volume: 0.8
       pitch: 1
     messages:
-      1:
+      0:
         type: text
         text: |-
           &c
           &aДля получения гражданства
           &aпройдите к &8[&bЛицензиатору&8]&a.
           &c
-        requirements: {}
 
   level-1: #totalautobroadcast.group.level-1
     interval: 300
@@ -30,7 +29,7 @@ groups:
       volume: 0.8
       pitch: 0.1
     messages:
-      1:
+      0:
         type: text
         text: |-
           &f
@@ -42,3 +41,51 @@ groups:
             type: '>'
             input: '%totaldailyrewards_available%'
             output: 0
+
+  vipe-end: #totalautobroadcast.group.vipe-end
+    interval: 600
+    enabled-worlds:
+      - world
+      - world_nether
+      - world_the_end
+    sound:
+      name: BLOCK_ENDER_CHEST_OPEN
+      volume: 0.5
+      pitch: 0.5
+    messages:
+      0:
+        type: text
+        text: |-
+          &f
+          &d1 числа будет произведено обнуление Края
+          &dНе забудьте вынести оттуда все свои ценные вещи ;)
+          &f
+        requirements:
+          1:
+            type: '>'
+            input: '%localtime_time_d%'
+            output: 25
+
+  afterworld: #totalautobroadcast.group.afterworld
+    interval: 60
+    enabled-worlds:
+      - afterworld
+    sound:
+      name: ENTITY_EXPERIENCE_ORB_PICKUP
+      volume: 0.8
+      pitch: 0.1
+    messages:
+      0:
+        type: text
+        text: |-
+          &f
+          &c  ❢ &aПодсказка
+          &eПо магме можно ходить, зажав шифт (&7Красться&e).
+          &f
+      1:
+        type: text
+        text: |-
+          &f
+          &c  ❢ &aПодсказка
+          &eВ этом мире можно бегать, не боясь потеряв очки сытости.
+          &f
