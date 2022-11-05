@@ -25,6 +25,7 @@ public class BroadcastManager {
 						p.playSound(p, bmessage.getSound(), bmessage.getSoundVolume(), bmessage.getSoundPitch());
 					}
 				});
+				bmessage.nextMessage();
 			}, bmessage.getInterval()*20, bmessage.getInterval()*20);
 			bmessage.setTaskNumber(taskNumber);
 		}
