@@ -51,6 +51,7 @@ public class BMessage {
 	}
 	
 	public void nextMessage() {
+		//test
 		this.currentMessage = (this.lines.size()==this.currentMessage+1) ? 0 : this.currentMessage+1;
 	}
 	
