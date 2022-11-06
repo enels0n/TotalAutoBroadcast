@@ -47,6 +47,7 @@ public class BMessage {
 	}
 	
 	public BMessageLine getCurrentMessage() {
+		System.out.println(this.currentMessage);
 		return this.lines.get(this.currentMessage);
 	}
 	
